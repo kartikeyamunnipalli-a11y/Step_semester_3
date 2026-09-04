@@ -41,12 +41,11 @@ Java practice solutions organized by week. Each week contains focused exercises,
 - [`LibraryBook.java`](week4/LibraryBook.java): Library book state and behavior.
 - [`SrmStudent.java`](week4/SrmStudent.java): Student information modeling.
 
-#### Week 4 Homework (`feature/session-4`)
+#### Week 4 Homework
 
-- [`A1_Hackathon.java`](https://github.com/kartikeyamunnipalli-a11y/Step_semester_3/blob/feature/session-4/week4/homework/A1_Hackathon.java): Participant registration and default teams.
-- [`A2_Canteen.java`](https://github.com/kartikeyamunnipalli-a11y/Step_semester_3/blob/feature/session-4/week4/homework/A2_Canteen.java): Item stock and restocking.
-- [`A3_Parking.java`](https://github.com/kartikeyamunnipalli-a11y/Step_semester_3/blob/feature/session-4/week4/homework/A3_Parking.java): Parking fine calculation and validation.
-- [`A4_Library.java`](https://github.com/kartikeyamunnipalli-a11y/Step_semester_3/blob/feature/session-4/week4/homework/A4_Library.java): Membership cards and static library information.
-- [`A5_Payment.java`](https://github.com/kartikeyamunnipalli-a11y/Step_semester_3/blob/feature/session-4/week4/homework/A5_Payment.java): Cash/card payments and processing fees.
-- [`CardPayment.java`](https://github.com/kartikeyamunnipalli-a11y/Step_semester_3/blob/feature/session-4/week4/homework/CardPayment.java), [`Item.java`](https://github.com/kartikeyamunnipalli-a11y/Step_semester_3/blob/feature/session-4/week4/homework/Item.java), [`MembershipCard.java`](https://github.com/kartikeyamunnipalli-a11y/Step_semester_3/blob/feature/session-4/week4/homework/MembershipCard.java), [`ParkingTicket.java`](https://github.com/kartikeyamunnipalli-a11y/Step_semester_3/blob/feature/session-4/week4/homework/ParkingTicket.java), and [`Participant.java`](https://github.com/kartikeyamunnipalli-a11y/Step_semester_3/blob/feature/session-4/week4/homework/Participant.java): Supporting homework model classes.
+- [`CardPayment.java`](week4/homework/CardPayment.java): Card payment behavior.
+- [`Item.java`](week4/homework/Item.java): Inventory item and stock behavior.
+- [`MembershipCard.java`](week4/homework/MembershipCard.java): Library membership card behavior.
+- [`ParkingTicket.java`](week4/homework/ParkingTicket.java): Parking ticket and fine behavior.
+- [`Participant.java`](week4/homework/Participant.java): Hackathon participant modeling.
 
