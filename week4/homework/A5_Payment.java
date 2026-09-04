@@ -1,0 +1,44 @@
+class Payment {
+    public double pay(double amount) {
+        validateAmount(amount);
+        System.out.println("Paid (cash): Rs " + amount);
+        return amount;
+    }
+
+    protected static void validateAmount(double amount) {
+        if (!Double.isFinite(amount) || amount < 0) {
+            throw new IllegalArgumentException("Payment amount must be finite and non-negative");
+        }
+    }
+}
+
+class CardPayment extends Payment {
+    public double payWithProcessingFee(double amount) {
+        validateAmount(amount);
+        double total = amount * 1.02;
+        System.out.println("Charged (card, incl. fee): Rs " + total);
+        return total;
+    }
+}
+
+public class A5_Payment {
+    public static double processTransaction(Payment payment, double amount) {
+        if (payment instanceof CardPayment) {
+            return ((CardPayment) payment).payWithProcessingFee(amount);
+        }
+        return payment.pay(amount);
+    }
+
+    public static void main(String[] args) {
+        Payment[] payments = {
+                new CardPayment(), new Payment(), new CardPayment(), new Payment(), new CardPayment()
+        };
+        double[] amounts = {100, 50, 200, 75, 120};
+        double totalCollected = 0;
+
+        for (int i = 0; i < payments.length; i++) {
+            totalCollected += processTransaction(payments[i], amounts[i]);
+        }
+        System.out.println("Total Collected: Rs " + totalCollected);
+    }
+}
