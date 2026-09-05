@@ -71,6 +71,36 @@ behavior while allowing specialized classes to add their own rules.
 - `ParkingTicket.java`: Models a parking ticket and fine calculation. This turns a real-world penalty rule into object behavior.
 - `Participant.java`: Models a hackathon participant. This demonstrates reusable participant data and behavior.
 
+## Week 5: Access Control, Encapsulation, and Immutability
+
+Week 5 uses a movie-booking system to bring several Java design ideas together.
+The exercises explain who can access data, how objects protect their internal
+state, how JavaBeans expose properties, and how immutable objects avoid unsafe
+changes after construction.
+
+- `MovieTicket.java`: Defines a movie ticket with `private`, package-private,
+	`protected`, and `public` fields. This demonstrates the four Java access
+	levels and why visibility should match the responsibility of each field.
+- `AccessChecker`: Classifies whether an access attempt is allowed in a given
+	class or package context. `summarizeBatch` also counts allowed and denied
+	attempts, making the access rules easy to test.
+- `CineScreen`: Protects total seats and available seats behind private fields.
+	Booking and cancellation methods enforce the valid range, so callers cannot
+	directly create an impossible seat count.
+- `MovieBookingProfile`: Demonstrates JavaBean conventions with constructors,
+	getters, setters, and the `isConfirmed` boolean getter. The OTP has a
+	write-only setter so sensitive data is not exposed through a getter.
+- `BookingReceipt`: Demonstrates immutability with final fields and defensive
+	copies of the seat array. `withUpdatedSeat` returns a new receipt instead of
+	changing the existing one.
+- `GroupBookingReceipt`: Extends `BookingReceipt` with a group-size property.
+	This shows inheritance while preserving the receipt's immutable design.
+- `NightlySettlementProcessor`: Processes a batch of receipts, skips null
+	entries, and uses `instanceof` to count group and individual bookings.
+- `CineHubSystem`: Runs the demonstrations for all five problems and prints
+	the expected results. `MovieTicket` forwards its `main` method to this test
+	driver.
+
 ## Repository Structure
 
 ```text
@@ -80,6 +110,7 @@ week3/                  Core object-oriented programming
 week3/homework/         Additional OOP practice
 week4/                  Inheritance, modifiers, and calculations
 week4/homework/         Additional OOP practice
+week5/                  Access control, encapsulation, and immutability
 ```
 
 ## Running a Program
