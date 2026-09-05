@@ -49,3 +49,28 @@ Java practice solutions organized by week. Each week contains focused exercises,
 - [`ParkingTicket.java`](week4/homework/ParkingTicket.java): Parking ticket and fine behavior.
 - [`Participant.java`](week4/homework/Participant.java): Hackathon participant modeling.
 
+### Week 5: Encapsulation, Access Control, and Immutability
+
+All five questions are implemented in one file:
+[`MovieTicket.java`](week5/MovieTicket.java).
+
+1. **MovieTicket fields:** Demonstrates Java access modifiers using private,
+	package-private, protected, and public fields.
+2. **AccessChecker:** Classifies whether a field access is allowed in different
+	contexts and summarizes batches of access attempts.
+3. **CineScreen:** Demonstrates encapsulation by validating screen capacity and
+	safely handling seat booking, cancellation, and availability.
+4. **MovieBookingProfile:** Implements JavaBean-style properties for a customer
+	name and confirmation status, plus a write-only OTP property.
+5. **BookingReceipt and settlement:** Demonstrates immutable receipt data with
+	defensive array copies, a wither method for updated seats, inheritance through
+	group receipts, and polymorphic nightly settlement processing.
+
+Run the Week 5 test driver with:
+
+```bash
+cd week5
+javac MovieTicket.java
+java MovieTicket
+```
+
