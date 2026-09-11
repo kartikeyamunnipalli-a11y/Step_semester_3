@@ -21,7 +21,7 @@ class MovieTicket {
     }
 }
 
-class AccessChecker {
+class MovieAccessChecker {
     public static String classifyAccess(String fieldModifier, String accessorContext) {
         if (fieldModifier == null || accessorContext == null) {
             return "DENIED";
@@ -209,17 +209,17 @@ class NightlySettlementProcessor {
 class CineHubSystem {
     public static void main(String[] args) {
         System.out.println("--- Testing Problem 1 & 2 ---");
-        System.out.println("Private + SAME_CLASS: " + AccessChecker.classifyAccess("private", "SAME_CLASS"));
-        System.out.println("Protected + DIFFERENT_PACKAGE: " + AccessChecker.classifyAccess("protected", "DIFFERENT_PACKAGE"));
-        System.out.println("Protected + OWN_TYPE: " + AccessChecker.classifyAccess("protected", "SUBCLASS_DIFFERENT_PACKAGE_OWN_TYPE"));
-        System.out.println("Protected + PARENT_TYPE: " + AccessChecker.classifyAccess("protected", "SUBCLASS_DIFFERENT_PACKAGE_PARENT_TYPE"));
+        System.out.println("Private + SAME_CLASS: " + MovieAccessChecker.classifyAccess("private", "SAME_CLASS"));
+        System.out.println("Protected + DIFFERENT_PACKAGE: " + MovieAccessChecker.classifyAccess("protected", "DIFFERENT_PACKAGE"));
+        System.out.println("Protected + OWN_TYPE: " + MovieAccessChecker.classifyAccess("protected", "SUBCLASS_DIFFERENT_PACKAGE_OWN_TYPE"));
+        System.out.println("Protected + PARENT_TYPE: " + MovieAccessChecker.classifyAccess("protected", "SUBCLASS_DIFFERENT_PACKAGE_PARENT_TYPE"));
 
         String[][] batch = {
             {"default", "SAME_PACKAGE"},
             {"default", "DIFFERENT_PACKAGE"},
             {"public", "DIFFERENT_PACKAGE"}
         };
-        System.out.println(AccessChecker.summarizeBatch(batch));
+        System.out.println(MovieAccessChecker.summarizeBatch(batch));
 
         System.out.println("\n--- Testing Problem 3 ---");
         CineScreen screen = new CineScreen(2);
