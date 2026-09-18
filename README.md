@@ -94,6 +94,8 @@ week3/homework/         Additional OOP practice
 week4/                  Inheritance, modifiers, and calculations
 week4/homework/         Additional OOP practice
 week5/                  Access control, encapsulation, and immutability
+week6/                  Library-member inheritance and polymorphism
+week6/homework/         Gym-member inheritance and polymorphism
 ```
 
 ## Running a Program
@@ -106,3 +108,17 @@ java FileName
 ```
 
 Replace `FileName` with the class name that contains the program entry point.
+
+## Week 6: Inheritance and Polymorphism
+
+Week 6 applies inheritance, method overriding, overloaded constructors and
+methods, polymorphism, validation, and batch processing to member systems.
+
+- `LibraryMember.java`: Models library members, student members, honors student
+	members, and faculty members with borrowing limits and fine tracking.
+
+### Week 6 Homework
+
+- `assignment_gymmember.java`: Models gym members, premium members, elite
+	members, and group-class members with fee tracking, late fees, and attendance
+	processing.
