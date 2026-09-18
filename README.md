@@ -71,35 +71,18 @@ behavior while allowing specialized classes to add their own rules.
 - `ParkingTicket.java`: Models a parking ticket and fine calculation. This turns a real-world penalty rule into object behavior.
 - `Participant.java`: Models a hackathon participant. This demonstrates reusable participant data and behavior.
 
-## Week 5: Access Control, Encapsulation, and Immutability
+## Week 5 Homework: Access Control and Encapsulation
 
-Week 5 uses a movie-booking system to bring several Java design ideas together.
-The exercises explain who can access data, how objects protect their internal
-state, how JavaBeans expose properties, and how immutable objects avoid unsafe
-changes after construction.
+The week 5 homework combines access modifiers, JavaBeans, defensive copying,
+immutability, and inheritance in library and movie-booking examples.
 
-- `MovieTicket.java`: Defines a movie ticket with `private`, package-private,
-	`protected`, and `public` fields. This demonstrates the four Java access
-	levels and why visibility should match the responsibility of each field.
-- `AccessChecker`: Classifies whether an access attempt is allowed in a given
-	class or package context. `summarizeBatch` also counts allowed and denied
-	attempts, making the access rules easy to test.
-- `CineScreen`: Protects total seats and available seats behind private fields.
-	Booking and cancellation methods enforce the valid range, so callers cannot
-	directly create an impossible seat count.
-- `MovieBookingProfile`: Demonstrates JavaBean conventions with constructors,
-	getters, setters, and the `isConfirmed` boolean getter. The OTP has a
-	write-only setter so sensitive data is not exposed through a getter.
-- `BookingReceipt`: Demonstrates immutability with final fields and defensive
-	copies of the seat array. `withUpdatedSeat` returns a new receipt instead of
-	changing the existing one.
-- `GroupBookingReceipt`: Extends `BookingReceipt` with a group-size property.
-	This shows inheritance while preserving the receipt's immutable design.
-- `NightlySettlementProcessor`: Processes a batch of receipts, skips null
-	entries, and uses `instanceof` to count group and individual bookings.
-- `CineHubSystem`: Runs the demonstrations for all five problems and prints
-	the expected results. `MovieTicket` forwards its `main` method to this test
-	driver.
+- `LibraryMemberBase.java`: Implements access checks, book circulation,
+	JavaBean properties, immutable loan receipts, and nightly circulation logic.
+- `MovieTicket.java`: Demonstrates access modifiers, seat-booking
+	encapsulation, JavaBeans, immutable booking receipts, and settlement
+	processing.
+- `TestRunner.java`: Runs the week 5 library-member, inventory, access-control,
+	and immutable-receipt demonstrations.
 
 ## Repository Structure
 
@@ -123,11 +106,3 @@ java FileName
 ```
 
 Replace `FileName` with the class name that contains the program entry point.
-
-## Week 6: Inheritance and Polymorphism
-
-- [`LibraryMember.java`](week6/LibraryMember.java): Models library members with inheritance, validation, fine tracking, and batch processing.
-
-### Week 6 Homework
-
-- [`assignment_gymmember.java`](week6/homework/assignment_gymmember.java): Models gym membership with inheritance, fee tracking, late fees, and polymorphic processing.
