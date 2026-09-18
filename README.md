@@ -123,3 +123,11 @@ java FileName
 ```
 
 Replace `FileName` with the class name that contains the program entry point.
+
+## Week 6: Inheritance and Polymorphism
+
+- [`LibraryMember.java`](week6/LibraryMember.java): Models library members with inheritance, validation, fine tracking, and batch processing.
+
+### Week 6 Homework
+
+- [`assignment_gymmember.java`](week6/homework/assignment_gymmember.java): Models gym membership with inheritance, fee tracking, late fees, and polymorphic processing.
